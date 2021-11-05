@@ -1,4 +1,5 @@
 const apiEndPoint = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
+const siteTitle = document.getElementById('site-title')
 const mealContainer = document.getElementById('meals')
 const spinner = document.getElementById('spinner')
 const searchInput = document.getElementById('search-input')
@@ -100,4 +101,11 @@ const notificationAlert = (alertSit, alertText = '') => {
 	alert.style.display = alertSit
 	alert.innerHTML = alertText
 }
-notificationAlert('none', '')
+notificationAlert('none')
+
+// page refresh
+siteTitle.addEventListener('click', () => {
+	mealContainer.textContent = ''
+	fetchMeals()
+	notificationAlert('none')
+})

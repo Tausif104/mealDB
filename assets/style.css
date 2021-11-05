@@ -3,3 +3,7 @@ div#spinner {
 	text-align: center;
 	padding: 70px;
 }
+
+#site-title {
+	cursor: pointer;
+}
